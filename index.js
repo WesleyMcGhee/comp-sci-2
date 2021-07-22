@@ -127,11 +127,17 @@ function getNumbersSquared(numbers) {
 }
 
 // Q: What is the space complexity of this function?
-// ANSWER:O(n)
+// ANSWER:O(log n)
 
 
 // Q: Is it possible to improve this function's space complexity? If it is, write a new function below.
-// ANSWER:no
+// ANSWER:yes
+function getNumbersSquared(numbers){
+  for(let i in numbers){
+    numbers[i] = numbers[i] * numbers[i];
+  }
+  return numbers;
+}
 
 
 
@@ -202,12 +208,12 @@ function countLettersRoundTwo(str) {
 
 
 // Q: What is the space complexity of each? 
-// ANSWER - countLetters:O(1)
+// ANSWER - countLetters:O(n)
 // ANSWER - countLettersRoundTwo:O(n)
 
 
 // Q: Explain how you came to your conclusions about the space complexity of each function. 
-// ANSWER: Although the first one seems long it does have a set number of memory it would take up with the object, where the second one can get bigger.
+// ANSWER: Because they both have a for loop they are both linear
 
 
 // 12) Memoization
